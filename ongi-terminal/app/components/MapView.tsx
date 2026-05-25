@@ -219,7 +219,7 @@ export default function MapView({
   const pathRef = useRef<KakaoPolyline | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/terminals")
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/terminals")
       .then((res) => res.json())
       .then((data: TerminalApiItem[]) => {
         const mapped = data.map((terminal, index) => {
