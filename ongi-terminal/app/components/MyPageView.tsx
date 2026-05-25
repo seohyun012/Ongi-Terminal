@@ -51,7 +51,7 @@ export default function MyPageView({
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (!token) return;
-    fetch("http://localhost:8000/points/history", {
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/points/history", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -79,7 +79,7 @@ export default function MyPageView({
   >([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/rewards")
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/rewards")
       .then((res) => res.json())
       .then((data) => setRewards(data))
       .catch(() => console.error("리워드 불러오기 실패"));
@@ -108,7 +108,7 @@ export default function MyPageView({
 
     try {
       const token = localStorage.getItem("access_token");
-      const res = await fetch("http://localhost:8000/rewards/exchange", {
+      const res = await fetch("https://ongi-terminal-production-9b74.up.railway.app/rewards/exchange", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
