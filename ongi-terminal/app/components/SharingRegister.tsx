@@ -80,7 +80,7 @@ export default function SharingRegister({
         return;
       }
 
-      const res = await fetch("http://localhost:8000/ai/sharing-helper", {
+      const res = await fetch("https://ongi-terminal-production-9b74.up.railway.app/ai/sharing-helper", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -159,7 +159,7 @@ export default function SharingRegister({
       formData.append("image_url", imageEmoji);
 
       try {
-        const res = await fetch("http://localhost:8000/items", {
+        const res = await fetch("https://ongi-terminal-production-9b74.up.railway.app/items", {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },
           body: formData,
