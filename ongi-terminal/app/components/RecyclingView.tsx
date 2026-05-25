@@ -48,7 +48,7 @@ export default function RecyclingView({
     setMembershipQrLoading(true);
     try {
       // 1. Fetch QR
-      const resQr = await fetch("http://localhost:8000/qr/membership", {
+      const resQr = await fetch("https://ongi-terminal-production-9b74.up.railway.app/qr/membership", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -59,7 +59,7 @@ export default function RecyclingView({
       }
 
       // 2. Fetch User Profile
-      const resUser = await fetch("http://localhost:8000/users/me", {
+      const resUser = await fetch("https://ongi-terminal-production-9b74.up.railway.app/users/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -103,7 +103,7 @@ export default function RecyclingView({
         return;
       }
 
-      const res = await fetch("http://localhost:8000/ai/chat", {
+      const res = await fetch("https://ongi-terminal-production-9b74.up.railway.app/ai/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
