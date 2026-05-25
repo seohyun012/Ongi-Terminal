@@ -36,7 +36,7 @@ export default function LoginView({
         return;
       }
       try {
-        const res = await fetch("http://localhost:8000/auth/register", {
+        const res = await fetch("https://ongi-terminal-production-9b74.up.railway.app/auth/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, nickname: id, password: pw, name, phone }),
@@ -49,7 +49,7 @@ export default function LoginView({
         const data = await res.json();
         localStorage.setItem("access_token", data.access_token);
         
-        const meRes = await fetch("http://localhost:8000/users/me", {
+        const meRes = await fetch("https://ongi-terminal-production-9b74.up.railway.app/users/me", {
           headers: { Authorization: `Bearer ${data.access_token}` },
         });
         const meData = await meRes.json();
@@ -65,7 +65,7 @@ export default function LoginView({
         return;
       }
       try {
-        const res = await fetch("http://localhost:8000/auth/login", {
+        const res = await fetch("https://ongi-terminal-production-9b74.up.railway.app/auth/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -82,7 +82,7 @@ export default function LoginView({
         const data = await res.json();
         localStorage.setItem("access_token", data.access_token);
         
-        const meRes = await fetch("http://localhost:8000/users/me", {
+        const meRes = await fetch("https://ongi-terminal-production-9b74.up.railway.app/users/me", {
           headers: { Authorization: `Bearer ${data.access_token}` },
         });
         const meData = await meRes.json();
