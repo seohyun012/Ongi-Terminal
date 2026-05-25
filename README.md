@@ -73,8 +73,7 @@
 
 ## 피그마, PPT
 | 📄 **기획서** | [PDF 보기](./ongi-terminal/ongiTerminalPDF.pdf) |
-| 🎨 **Figma** | [디자인 보기]([https://figma.com/여기에_링크](https://www.figma.com/design/QVf1NAqRt5W0UNq2UVER18/%EC%98%A8%EA%B8%B0-%ED%84%B0%EB%AF%B8%EB%84%90-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&p=f&t=sMlrc4aGfEsV2RZx-0)) |
-
+| 🎨 **Figma** | [디자인 보기](https://www.figma.com/design/QVf1NAqRt5W0UNq2UVER18/%EC%98%A8%EA%B8%B0-%ED%84%B0%EB%AF%B8%EB%84%90-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&p=f&t=sMlrc4aGfEsV2RZx-0) |
 <br/>
 
 ## 👨‍💻 팀 구성 및 역할
