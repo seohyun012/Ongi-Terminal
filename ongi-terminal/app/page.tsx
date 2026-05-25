@@ -103,7 +103,7 @@ export default function Home() {
   ]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/items")
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/items")
       .then((res) => res.json())
       .then((data) => {
         const mapped = data.map(
@@ -162,7 +162,7 @@ export default function Home() {
     if (!token) return;
 
     // Auto-login session restore
-    fetch("http://localhost:8000/users/me", {
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/users/me", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {
@@ -188,7 +188,7 @@ export default function Home() {
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (!token || !isLoggedIn) return;
-    fetch("http://localhost:8000/items/my", {
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/items/my", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(async (res) => {
@@ -245,7 +245,7 @@ export default function Home() {
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (!token || !isLoggedIn) return;
-    fetch("http://localhost:8000/points/balance", {
+    fetch("https://ongi-terminal-production-9b74.up.railway.app/points/balance", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -335,7 +335,7 @@ export default function Home() {
     if (!token) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/items/${itemId}`, {
+      const res = await fetch(`https://ongi-terminal-production-9b74.up.railway.app/items/${itemId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
