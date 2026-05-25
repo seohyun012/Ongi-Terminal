@@ -81,7 +81,7 @@ export default function SharingView({
 
     setIsLoadingQr(true);
     try {
-      const res = await fetch(`http://localhost:8000/qr/generate/checkout`, {
+      const res = await fetch(`https://ongi-terminal-production-9b74.up.railway.app/qr/generate/checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
